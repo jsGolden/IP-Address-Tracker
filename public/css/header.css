@@ -1,0 +1,62 @@
+header {
+
+    width: 100%;
+    padding: 1.8rem 1.7rem;
+    background: url('../images/pattern-bg.png') no-repeat;
+    background-color: #5F86F2;
+    height: 19.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+header h1 {
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: 2.0rem;
+}
+
+header .search-bar {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 1.2rem;
+    height: 5.0rem;
+
+    display: flex;
+    max-width: 60.0rem;
+}
+
+header .search-bar.invalid {
+    border: 1px solid #bf2f24;
+}
+
+.search-bar input {
+    border: none;
+    margin-left: 3.0rem;
+    width: 100%;
+}
+
+.search-bar button {
+    border: none;
+
+    height: 100%;
+    width: 15%;
+    background: black;
+
+    border-radius: 0 1.2rem 1.2rem 0;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color .3s;
+}
+
+.search-bar button:hover {
+    background: #212121;
+}
