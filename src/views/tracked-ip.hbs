@@ -1,76 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IP Address | IP Address Tracker</title>
-    <link rel="icon" href="/images/favicon-32x32.png" />
 
-    <!---------------------------------- LEAFLET API MAP ----------------------------------------------------->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IP Address | IP Address Tracker</title>
+  <link rel="icon" href="/images/favicon-32x32.png" />
+
+  <!---------------------------------- LEAFLET API MAP ----------------------------------------------------->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
+    crossorigin="" />
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
 
-    
 
-    <!---------------------------------- GOOGLE FONTS ---------------------------------------------------------->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <!---------------------------------------------------------------------------------------------------------->
 
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/page-ip.css" />
-    <link rel="stylesheet" href="/css/header.css" />
-  </head>
-  <body>
-    <div class="ip-info-container">
+  <!---------------------------------- GOOGLE FONTS ---------------------------------------------------------->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!---------------------------------------------------------------------------------------------------------->
 
-      <div class="ip-info">
-        <span>IP Address</span>
-        <p>{{ipAddress.ip}}</p>
-      </div>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/page-ip.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+</head>
 
-      <div class="ip-info">
-        <span>Location</span>
-        <p>{{ipAddress.city}}, {{ipAddress.country}}</p>
-      </div>
+<body>
+  <div class="ip-info-container">
 
-      <div class="ip-info">
-        <span>Timezone</span>
-        <p>{{ipAddress.timezone_gmt}}</p>
-      </div>
-
-      <div class="ip-info">
-        <span>Provider</span>
-        <p>{{ipAddress.isp}}</p>
-      </div>
+    <div class="ip-info">
+      <span>IP Address</span>
+      <p>{{ipAddress.ip}}</p>
     </div>
-    <main>
-      <header>
-        <h1>IP Address Tracker</h1>
-        <form class="search-bar" action="" onsubmit="checkIP(event)">
-          <input id="ip" name="ip" placeholder="Type the ip here" value="{{ipAddress.ip}}" required />
-          <button href="#">
-            <img src="/images/icon-arrow.svg" alt="Track ip" />
-          </button>
-        </form>
-      </header>
 
-      <div id="map"></div>
+    <div class="ip-info">
+      <span>Location</span>
+      <p>{{ipAddress.city}}, {{ipAddress.country}}</p>
+    </div>
 
-    </main>
-    <span hidden 
-        id="ipSpan"
-        data-lat="{{ipAddress.latitude}}"
-        data-lng="{{this.ipAddress.longitude}}"
-    ></span>
-    <script src="/scripts/page-tracked-ip.js"></script>
-    <script src="/scripts/checkIP.js"></script>
-  </body>
+    <div class="ip-info">
+      <span>Timezone</span>
+      <p>{{ipAddress.timezone_gmt}}</p>
+    </div>
+
+    <div class="ip-info">
+      <span>Provider</span>
+      <p>{{ipAddress.isp}}</p>
+    </div>
+  </div>
+  <main>
+    <header>
+      <h1>IP Address Tracker</h1>
+      <form class="search-bar" action="" onsubmit="checkIP(event)">
+        <input id="ip" name="ip" placeholder="Type the ip here" value="{{ipAddress.ip}}" required />
+        <button href="#">
+          <img src="/images/icon-arrow.svg" alt="Track ip" />
+        </button>
+      </form>
+    </header>
+
+    <div id="map"></div>
+
+  </main>
+  <span hidden id="ipSpan" data-lat="{{ipAddress.latitude}}" data-lng="{{ipAddress.longitude}}"></span>
+  <script src="/scripts/page-tracked-ip.js"></script>
+  <script src="/scripts/checkIP.js"></script>
+</body>
+
 </html>
