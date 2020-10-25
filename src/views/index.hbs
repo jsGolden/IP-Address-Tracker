@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | IP Address Tracker</title>
+
+    <link rel="icon" href="/images/favicon-32x32.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/page-index.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/notifications.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>IP Address Tracker</h1>
+
+        <form class="search-bar" action="" onsubmit="checkIP(event)">
+          <input id="ip" name="ip" placeholder="Type the ip here" required />
+          <button href="#">
+            <img src="/images/icon-arrow.svg" alt="Track ip" />
+          </button>
+        </form>
+
+      </header>
+          {{#if error}}
+          <div class="notification-container">
+            <div class="notification is-danger" >
+              <p>IP Address not found or incorrect format.</p>
+            </div>
+          </div>
+          {{/if}}
+
+        <div class="infos">
+          <div class="info-container">
+            <div class="info">
+              <span>What's ip tracker?</span>
+              <p>
+                IP Address Tracker is a service that uses public api to
+                approximately locate the location of the inserted IP.
+              </p>
+            </div>
+
+            <div class="info">
+              <span>What's the accuracy?</span>
+              <p>
+                There may be contact information that appears correct – i.e.
+                that represents a valid and viable name and address (electronic
+                and/or physical) – but is not necessarily accurate, i.e. it does
+                not correspond to the person registering, managing or owning the
+                domain name.
+              </p>
+            </div>
+          </div>
+
+          <div class="info-container">
+            <div class="info">
+              <span>Is this safe?</span>
+              <p>
+                We don't store information about your network, we just create an
+                interface for information about other IP addresses.
+              </p>
+            </div>
+
+            <div class="info">
+              <span>Public API Sources</span>
+              <p>
+                We use the API <a href="https://ipwhois.io/">ipWhoIs</a> to be
+                able to track the addresses =)
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        
+
+      <footer>
+        <div class="info-warning">
+          <p>We are not responsible for misuse of this tool</p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="/scripts/page-info.js"></script>
+    <script src="/scripts/checkIP.js"></script>
+  </body>
+</html>

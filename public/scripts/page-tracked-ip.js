@@ -1,10 +1,21 @@
+const ipSpan = document.getElementById('ipSpan');
+const lat = ipSpan.dataset.lat;
+const lng = ipSpan.dataset.lng;
+
 //Map options
 const options = {
     zoomControl: false
 };
 
-var map = L.map('map', options).setView([51.505, -0.09], 15);
+//Create Icon
+const icon = L.icon({
+    iconUrl: "/images/icon-location.svg",
+    iconSize: [20, 28]
+});
+
+var map = L.map('map', options).setView([lat, lng], 15);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-L.marker([51.5, -0.09]).addTo(map);
+L.marker([lat, lng], { icon }).addTo(map);
+
