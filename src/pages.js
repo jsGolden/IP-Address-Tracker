@@ -7,6 +7,7 @@ module.exports = {
     if (!validateIPAddress(ip)) return res.render("index", { error: true });
     let ipAddress = await getIPAddress(ip);
     if (!ipAddress.success) return res.render("index", { error: true });
+    if(Object.values(ipAddress).includes(null)) return res.render("index", { error: true });
     return res.render("tracked-ip", { ipAddress });
   },
 };
