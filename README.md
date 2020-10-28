@@ -1,9 +1,10 @@
 # IP Address Tracker
 
 <p align="center">
-  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-demonstração">Demonstração</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-licença">Licença</a>
 </p>
 
@@ -33,13 +34,19 @@ Este é um projeto desenvolvido de acordo com um challenge do site [Frontend Men
 
 Você pode visualizar o layout do projeto através do link abaixo:
 
-- [IP Address Tracker Template](https://www.figma.com/file/rCEzlvmaqekLSUOmrn3CKe/ip-tracker?node-id=17%3A13) 
+- [IP Address Tracker Layout](https://www.figma.com/file/rCEzlvmaqekLSUOmrn3CKe/ip-tracker?node-id=17%3A13) 
 
 Lembrando que você precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
 
+## 📲 Demonstração
+
+Você também pode visualizar este projeto via [Heroku](https://www.heroku.com/):
+- [IP Address Tracker Live Server](https://ip-address-tracker-foolish.herokuapp.com/)
+Há uma possibilidade do servidor estar inativo.
+
 ## 📝 Licença
 
-Esse projeto está sob a licença [MIT](LICENSE.md).
+Esse projeto está sob a licença [MIT](LICENSE).
 OpenStreetMap® está sob a licença [OBDL](https://opendatacommons.org/licenses/odbl/)
 
 ---

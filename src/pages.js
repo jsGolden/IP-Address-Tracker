@@ -1,4 +1,4 @@
-const getIPAddress = require("./getIPAddress");
+const getIPAddress = require("./getIpAddress");
 
 module.exports = {
   async index(req, res) {
